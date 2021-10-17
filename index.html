@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-theme='dark'>
+    <main>
+        <div class="upper-part">
+            <header class="upper-header">
+                <h1>Social Media Dashboard</h1>
+                <p>Total Followers: 23,004</p>
+            </header>
+
+            <label for="toggle-slide" class="switch">
+                <p>Dark Mode</p>
+                <input type="checkbox" id="toggle-slide" aria-live="polite">
+                <span class="slider" tabindex="0"></span>
+            </label>
+
+            <div class="social-media facebook">
+                <div class="icon-container">
+                    <img src="images/icon-facebook.svg" alt="">
+                    <p class="username">@nathanf</p>
+                </div>
+                <p class="followers-amount">1987</p>
+                <p class="followers">Followers</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="overview gain">12 Today</p>
+                </div>
+            </div>
+            
+            <div class="social-media twitter">
+                <div class="icon-container">
+                    <img src="images/icon-twitter.svg" alt="">
+                    <p class="username">@nathanf</p>
+                </div>
+                <p class="followers-amount">1044</p>
+                <p class="followers">Followers</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="overview gain">99 Today</p>
+                </div>
+            </div>
+            
+            <div class="social-media instagram">
+                <div class="icon-container">
+                    <img src="images/icon-instagram.svg" alt="">
+                    <p class="username">@realnathanf</p>
+                </div>
+                <p class="followers-amount">11k</p>
+                <p class="followers">Followers</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="overview gain">1099 Today</p>
+                </div>
+            </div>
+            
+            <div class="social-media youtube">
+                <div class="icon-container">
+                    <img src="images/icon-youtube.svg" alt="">
+                    <p class="username">Nathan F.</p>
+                </div>
+                <p class="followers-amount">8239</p>
+                <p class="followers">Subscribers</p>
+                <div class="icon-container">
+                    <img src="images/icon-down.svg" class="arrow" alt="">
+                    <p class="overview loss">144 Today</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lower-part">
+            <h2>Overview - Today</h2>
+
+            <div class="notifications">
+                <p class="heading">Page Views</p>
+                <img class="media-icon" src="images/icon-facebook.svg" alt="">
+                <p class="gained">87</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="percentage gain">3%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Likes</p>
+                <img class="media-icon" src="images/icon-facebook.svg" alt="">
+                <p class="gained">52</p>
+                <div class="icon-container">
+                    <img src="images/icon-down.svg" class="arrow" alt="">
+                    <p class="percentage loss">2%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Likes</p>
+                <img class="media-icon" src="images/icon-instagram.svg" alt="">
+                <p class="gained">5462</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="percentage gain">2257%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Profile Views</p>
+                <img class="media-icon" src="images/icon-instagram.svg" alt="">
+                <p class="gained">52k</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="percentage gain">1375%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Retweets</p>
+                <img class="media-icon" src="images/icon-twitter.svg" alt="">
+                <p class="gained">117</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="percentage gain">303%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Likes</p>
+                <img class="media-icon" src="images/icon-twitter.svg" alt="">
+                <p class="gained">507</p>
+                <div class="icon-container">
+                    <img src="images/icon-up.svg" class="arrow" alt="">
+                    <p class="percentage gain">553%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Likes</p>
+                <img class="media-icon" src="images/icon-youtube.svg" alt="">
+                <p class="gained">107</p>
+                <div class="icon-container">
+                    <img src="images/icon-down.svg" class="arrow" alt="">
+                    <p class="percentage loss">19%</p>
+                </div>
+            </div>
+            
+            <div class="notifications">
+                <p class="heading">Total Views</p>
+                <img class="media-icon" src="images/icon-youtube.svg" alt="">
+                <p class="gained">1407</p>
+                <div class="icon-container">
+                    <img src="images/icon-down.svg" class="arrow" alt="">
+                    <p class="percentage loss">12%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

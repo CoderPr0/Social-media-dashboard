@@ -1,0 +1,324 @@
+/* ______colors______ */
+body[data-theme='dark']{
+    /* background color */
+    --color-1: linear-gradient(hsl(232, 19%, 15%) 35%, hsl(230, 17%, 14%) 35%);
+    /* Amounts */
+    --color-2: hsl(0, 0%, 100%);
+    /* Usernames, total followers, followers, heading */
+    --color-3: hsl(228, 34%, 66%);
+    /* Social media, notifications */
+    --color-4: hsl(228, 28%, 20%);
+    /* social media hover, notification hover */
+    --color-5: hsl(228, 28%, 27%);
+}
+body[data-theme='light']{
+    /* background color */
+    --color-1: linear-gradient(hsl(225, 100%, 98%) 35%, hsl(0, 0%, 100%) 35%);
+    /* Amounts */
+    --color-2: hsl(230, 17%, 14%);
+    /* Usernames, mode, total followers, followers, heading */
+    --color-3: hsl(228, 12%, 44%);
+    /* Social media, notifications */
+    --color-4: hsl(227, 47%, 96%);
+    /* social media hover, notification hover */
+    --color-5: hsl(227, 47%, 90%);
+}
+
+
+/* ______styling______ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-2);
+    outline: none;
+    margin: 0;
+}
+
+body {
+    background: var(--color-1) no-repeat;
+    height: 100vh;
+    margin: 3em 10% 0;
+}
+
+
+
+
+/* _______main_______ */
+main > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.icon-container {
+    display: flex;
+    gap: 0.4em;
+}
+
+.arrow {
+    margin: auto 0;
+}
+
+.gain {
+    color: hsl(163, 72%, 41%);
+}
+
+.loss {
+    color: hsl(356, 69%, 56%);
+}
+
+
+/* ____upper part____ */
+.upper-part {
+    column-gap: 2em;
+    row-gap: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+/* ___header___ */
+.upper-header {
+    grid-column: span 2;
+}
+
+.upper-header > p {
+    color: var(--color-3);
+}
+
+/* ___toggle___ */
+.switch {
+    display: flex;
+    grid-column: span 2;
+    justify-content: end;
+    cursor: pointer;
+    position: relative;
+}
+
+.switch > p {
+    color: var(--color-3);
+    margin: auto 0.4em auto 0;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    display: inline-block;
+    cursor: pointer;
+    width: 3em;
+    height: 1.8em;
+
+    border-radius: 1.4em;
+    margin: auto 0;
+    position: relative;
+}
+
+.slider:focus-visible {
+    box-shadow: 0 0 1px 2px hsl(0, 0%, 100%), 0 0 2px 4px hsl(226, 100%, 87%);
+    border-radius: 1em;
+}
+
+.slider:before {
+    content: "";
+    background: hsl(232, 19%, 15%);
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 0.2em;
+    bottom: 0.2em;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background: hsl(230, 22%, 74%);
+}
+  
+input:checked + .slider:before {
+    background: hsl(0, 0%, 100%);
+    transform: translateX(1.2em);
+}
+
+/* ___media___ */
+.social-media {
+    background: var(--color-4);
+    text-align: center;
+    cursor: pointer;
+
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.social-media:hover {
+    background: var(--color-5);
+}
+
+.facebook {
+    border-top: hsl(208, 92%, 53%) 5px solid;
+}
+
+.twitter {
+    border-top: hsl(203, 89%, 53%) 5px solid;
+}
+
+.instagram {
+    position: relative;
+}
+
+.instagram::after {
+    content: "";
+    background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 6px;
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.youtube {
+    border-top: hsl(348, 97%, 39%) 5px solid;
+}
+
+/* _content_ */
+.social-media > div {
+    justify-content: center;
+}
+
+.username {
+    color: var(--color-3);
+    font-size: 14px;
+    margin: auto 0;
+}
+
+.followers-amount {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 0.9em;
+    margin-top: 0.6em;
+}
+
+.followers {
+    color: var(--color-3);
+    letter-spacing: 0.3em;
+    margin-bottom: 1em;
+}
+
+.overview {
+    font-size: 14px;
+}
+
+
+
+/* ____lower part____ */
+.lower-part {
+    column-gap: 2em;
+    row-gap: 1.7em;
+}
+
+main h2 {
+    grid-column: span 4;
+}
+
+.notifications {
+    background: var(--color-4);
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    row-gap: 1em;
+    cursor: pointer;
+
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.notifications:hover {
+    background: var(--color-5);
+}
+
+.heading {
+    color: var(--color-3);
+}
+
+.gained {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.lower-part .icon-container, .media-icon {
+    justify-self: end;
+}
+
+.lower-part .icon-container {
+    margin: auto 0 0;
+}
+
+
+
+
+@media(max-width:1280px){
+    /* _______main_______ */
+    /* ____lower part____ */
+    .notifications {
+        padding: 2em 1em;
+    }
+}
+
+@media(max-width:1120px){
+    body {
+        height: 200vh;
+    }
+
+    /* _______main_______ */
+    main > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ____upper part____ */
+    .upper-part{
+        row-gap: 1.5em;
+    }
+    /* ___header___ */
+    .upper-header {
+        padding-bottom: 2em;
+        border-bottom: var(--color-3) 1px solid;
+    }
+    /* ___toggle___ */
+    .switch > p {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    /* ____lower part____ */
+    main h2 {
+        grid-column: span 2;
+    }
+}
+
+@media(max-width: 620px){
+    body{
+        height: 350vh;
+    }
+
+    /* _______main_______ */
+    main > div {
+        grid-template-columns: 1fr;
+    }
+    /* ___header___ */
+    .upper-header{
+        grid-column: span 1;
+    }
+    main h1 {
+        font-size: 28px;
+    }
+    /* ___toggle___ */
+    .switch{
+        grid-column: span 1;
+    }
+    /* ____lower part____ */
+    main h2 {
+        grid-column: span 1;
+    }
+}
